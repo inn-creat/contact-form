@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Karla", sans-serif;
+}
+:root{
+    --green_lighter:hsl(148, 38%, 91%);
+    --green_medium:hsl(169, 82%, 27%);
+    --red:hsl(0, 66%, 54%);
+    --white:hsl(0, 0%, 100%);
+    --grey_medium:hsl(186, 15%, 59%);
+    --grey_darker:hsl(187, 24%, 22%);
+}
+body{
+    background-color: var(--green_lighter);
+    position: relative;
+}
+section{
+    background-color: var(--white);
+    width: 50%;
+    margin: 10% auto;
+    padding: 1.5rem;
+    border-radius: 0.7rem;
+}
+section h1{
+    margin-bottom: 1rem;
+}
+label{
+    font-size: 1rem;
+}
+input{
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border-radius: 0.2rem;
+    outline: none;
+    border: 1px solid var(--grey_medium);
+}
+input.invalid{
+    border: 2px solid var(--red);
+}
+input:focus,input:hover{
+    border: 2px solid var(--green_medium);
+    cursor:pointer;
+}
+.name{
+    display: flex;
+    gap:1rem;
+}
+.name div{
+    width: 50%;
+}
+.type{
+    display: flex;
+    gap: 1rem;
+}
+.query{
+    width: 50%;
+}
+.query:last-child{
+    margin-top: 1rem;
+}
+button{
+    padding: 0.7rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    background-color: var(--white);
+    border: 1px solid var(--grey_medium);
+    outline: none;
+    border-radius: 0.2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.6rem;
+}
+button:hover{
+    border: 1px solid var(--green_medium);
+    cursor: pointer;
+}
+button.selected{
+    background-color: var(--green_lighter);
+    border: 1px solid var(--green_medium);
+}
+button span{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--grey_medium);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+button span img{
+    display: none;
+}
+textarea{
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.7rem;
+    height: 5rem;
+    border: 1px solid var(--grey_medium);
+    outline: none;
+    resize: none;
+    border-radius: 0.3rem;
+}
+textarea:focus,textarea:hover{
+    border: 2px solid var(--green_medium);
+    cursor:pointer;
+}
+textarea.invalid{
+    border: 2px solid var(--red);
+}
+.checkbox{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+}
+.checkbox span{
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--grey_medium);
+    border-radius: 0.1rem;
+}
+.checkbox span img{
+    display: none;
+}
+input[type='submit']{
+    background-color: var(--green_medium);
+    margin-top: 1rem;
+    color: var(--white);
+    cursor: pointer;
+}
+.success{
+    background-color: var(--green_medium);
+    width: 30%;
+    padding: 1rem;
+    position: absolute;
+    top:-10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border-radius: 0.3rem;
+    display: none;
+}
+.success-header{
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.success-header p{
+    font-weight: 700;
+    color: var(--white);
+}
+.suc-meg{
+    color: var(--white);
+    font-size: 0.8rem;
+}
+
+/* create the error message */
+.error{
+    color: var(--red);
+    margin-bottom: 0.5rem;
+}
+@media(max-width:601px)and(max-width:1440px){
+    section{
+        width: 70%;
+    }
+}
+@media(max-width:600px){
+    section{
+        width: 90%;
+    }
+    .name,.type{
+        flex-direction: column;
+    }
+    .name div{
+        width: 100%;
+    }
+    .query{
+        width: 100%;
+    }
+    .query:last-child{
+        margin-top: 0;
+    }
+}
